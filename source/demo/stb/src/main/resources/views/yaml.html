@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<title th:text="${page_id}">
+
+</title>
+<body>
+<!-- Header -->
+<h1>
+    <span th:text="'This is ' + ${page_id}"</span>
+</h1>
+<div th:utext="${yamlContent}" ></div>
+</body>
+</html>

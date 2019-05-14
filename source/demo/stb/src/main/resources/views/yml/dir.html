@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<title th:text="${page_id}">
+
+</title>
+<body>
+<!-- Header -->
+<h1>
+    <span th:text="'This is index ' + ${page_id}"</span>
+</h1>
+<ul th:each="dir : ${lists}">
+    <li><a th:href="@{'/notes/'+${page_id} + '/' + ${dir}}"  th:text="${dir}"></a></li>
+</ul>
+</body>
+</html>
