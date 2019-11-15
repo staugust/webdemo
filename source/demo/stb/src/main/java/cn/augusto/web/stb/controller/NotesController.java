@@ -36,7 +36,6 @@ public class NotesController {
 
   @RequestMapping(method = RequestMethod.GET, path = {"/notes/**"}) //,"/notes/{page_id}"})
   public String notes(HttpServletRequest request, Model model ){
-//    System.out.println(beanNameViewResolver.resolveViewName("yamlView", Locale.CHINA));
     String page_id = new AntPathMatcher()
                          .extractPathWithinPattern( "/{id}/**", request.getRequestURI() );
     if(yamlLister.isPage(page_id)){
@@ -56,5 +55,4 @@ public class NotesController {
     }
     return "error";
   }
-
 }

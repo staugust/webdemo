@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
     <title>Error page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="../static/bootstrap/css/bootstrap.min.css}" rel="stylesheet" media="screen" th:href="@{/bootstrap/css/bootstrap.min.css}"/>
+    <link href="../static/bootstrap/css/core.css" rel="stylesheet" media="screen" th:href="@{/bootstrap/css/core.css}"/>
 </head>
 <body>
-<h1> This is error page. </h1>
-
+<div class="container">
+    <div th:replace="alert :: alert (type='danger', message=${errorMessage})">Error: Error</div>
+    <div th:include="footer :: footer">&copy; 2017 The Static Templates</div>
+</div>
 </body>
 </html>

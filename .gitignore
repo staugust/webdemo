@@ -27,3 +27,4 @@ hs_err_pid*
 *.iml
 
 source/demo/stb/target
+source/demo/stb/src/main/resources/md
